@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="官兵 · 资深产品经理 | TikTok商业化 | Keeta | AI应用 | 国际化产品">
+<meta property="og:title" content="官兵 · 产品经理简历">
+<meta property="og:description" content="3+年TikTok商业产品经验，Keeta Product BP，AI原生产品人">
+<title>官兵 · 产品经理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --blue:#1B4F72;--blue-mid:#2E86C1;--blue-light:#D6EAF8;
+  --gray-bg:#F5F7FA;--gray-line:#E0E6ED;--gray-text:#6B7B8D;
+  --text:#1A2332;--white:#fff;
+  --radius:8px;--radius-lg:14px;
+  --shadow:0 2px 16px rgba(27,79,114,.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:var(--white);line-height:1.7;font-size:15px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--gray-line);height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+.nav-logo{font-weight:600;font-size:16px;color:var(--blue);letter-spacing:.5px}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--gray-text);font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--blue-mid)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--blue);border-radius:2px;transition:.3s}
+
+/* HERO */
+.hero{min-height:100vh;padding:80px 5% 60px;display:flex;align-items:center;background:linear-gradient(135deg,#f8fbff 0%,#eaf3fb 100%)}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;margin-bottom:20px;letter-spacing:.4px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:600;color:var(--blue);line-height:1.2;margin-bottom:12px}
+.hero-tagline{font-size:1.15rem;color:var(--gray-text);margin-bottom:28px;line-height:1.6;max-width:700px}
+.hero-stats{display:flex;gap:32px;margin-bottom:36px}
+.stat{text-align:center}
+.stat-num{font-size:1.6rem;font-weight:700;color:var(--blue-mid)}
+.stat-label{font-size:12px;color:var(--gray-text);margin-top:2px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:11px 24px;border-radius:var(--radius);font-size:14px;font-weight:600;text-decoration:none;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:8px;border:none}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-mid)}
+.btn-outline{background:#fff;color:var(--blue);border:1.5px solid var(--blue)}
+.btn-outline:hover{background:var(--blue-light)}
+.hero-photo{width:200px;height:200px;border-radius:50%;border:4px solid #fff;box-shadow:0 8px 32px rgba(27,79,114,.18);object-fit:cover;object-position:center top;background:#dde6f0;flex-shrink:0}
+.hero-photo-placeholder{width:200px;height:200px;border-radius:50%;border:4px solid #fff;box-shadow:0 8px 32px rgba(27,79,114,.18);background:var(--blue-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-photo-placeholder i{font-size:80px;color:var(--blue);opacity:.4}
+
+/* SECTIONS */
+section{padding:80px 5%}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--blue-mid);text-transform:uppercase;margin-bottom:10px}
+.section-title{font-size:clamp(1.5rem,3vw,2rem);font-weight:600;color:var(--blue);margin-bottom:40px}
+section:nth-child(even){background:var(--gray-bg)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+.about-text p{color:#3a4a5c;margin-bottom:16px;line-height:1.8}
+.strengths{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.strength-card{background:#fff;border:1px solid var(--gray-line);border-radius:var(--radius-lg);padding:16px 18px;border-left:3px solid var(--blue-mid)}
+.strength-card h4{font-size:13px;font-weight:600;color:var(--blue);margin-bottom:5px}
+.strength-card p{font-size:12px;color:var(--gray-text);line-height:1.5}
+
+/* EXPERIENCE TIMELINE */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--gray-line)}
+.tl-item{position:relative;margin-bottom:40px}
+.tl-dot{position:absolute;left:-29px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--blue-mid);border:2px solid #fff;box-shadow:0 0 0 2px var(--blue-mid)}
+.tl-item.current .tl-dot{background:var(--blue);box-shadow:0 0 0 3px var(--blue-light)}
+.tl-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+.tl-company{font-size:16px;font-weight:600;color:var(--blue)}
+.tl-period{font-size:12px;color:var(--gray-text);background:var(--gray-bg);padding:3px 10px;border-radius:12px;white-space:nowrap}
+.tl-role{font-size:13px;color:var(--blue-mid);font-weight:500;margin-bottom:10px}
+.tl-bullets{list-style:none;padding:0}
+.tl-bullets li{font-size:14px;color:#3a4a5c;padding-left:16px;position:relative;margin-bottom:7px;line-height:1.65}
+.tl-bullets li::before{content:'▸';position:absolute;left:0;color:var(--blue-mid);font-size:11px;top:3px}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.proj-card{background:#fff;border:1px solid var(--gray-line);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue-mid)}
+.proj-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(27,79,114,.14)}
+.proj-icon{width:44px;height:44px;border-radius:10px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.proj-icon i{font-size:20px;color:var(--blue)}
+.proj-card h3{font-size:16px;font-weight:600;color:var(--blue);margin-bottom:6px}
+.proj-sub{font-size:12px;color:var(--gray-text);margin-bottom:14px}
+.proj-card p{font-size:13px;color:#3a4a5c;line-height:1.7;margin-bottom:16px}
+.proj-metrics{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.metric-badge{background:var(--blue-light);color:var(--blue);font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px}
+.proj-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:var(--gray-bg);color:var(--gray-text);font-size:11px;padding:3px 9px;border-radius:10px}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.skill-group{background:#fff;border:1px solid var(--gray-line);border-radius:var(--radius-lg);padding:22px}
+.skill-group h3{font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.skill-group h3 i{color:var(--blue-mid)}
+.skill-item{margin-bottom:12px}
+.skill-name{font-size:13px;color:var(--text);margin-bottom:5px;display:flex;justify-content:space-between}
+.skill-bar{height:5px;background:var(--gray-line);border-radius:3px;overflow:hidden}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-mid));border-radius:3px;width:0;transition:width 1.2s ease}
+.lang-tags{display:flex;flex-wrap:wrap;gap:8px}
+.lang-tag{background:var(--blue-light);color:var(--blue);font-size:13px;font-weight:500;padding:6px 14px;border-radius:20px;display:flex;align-items:center;gap:6px}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.contact-info p{color:#3a4a5c;margin-bottom:24px;line-height:1.8}
+.contact-links{display:flex;flex-direction:column;gap:14px}
+.contact-link{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text);padding:14px 18px;border:1px solid var(--gray-line);border-radius:var(--radius-lg);background:#fff;transition:.2s;font-size:14px}
+.contact-link:hover{border-color:var(--blue-mid);background:var(--blue-light);color:var(--blue)}
+.contact-link i{width:28px;text-align:center;color:var(--blue-mid);font-size:16px}
+.contact-cta{background:var(--blue);color:#fff;border-radius:var(--radius-lg);padding:32px;text-align:center}
+.contact-cta h3{font-size:1.2rem;font-weight:600;margin-bottom:10px}
+.contact-cta p{font-size:14px;opacity:.85;margin-bottom:22px}
+
+/* FOOTER */
+footer{background:var(--blue);color:rgba(255,255,255,.7);text-align:center;padding:24px 5%;font-size:13px}
+footer a{color:#fff;text-decoration:none}
+footer .vibe{color:rgba(255,255,255,.5);margin-top:6px;font-size:12px}
+
+/* ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:#fff;border-bottom:1px solid var(--gray-line);flex-direction:column;padding:20px 5%;gap:18px}
+  .nav-links.open{display:flex}
+  .hamburger{display:flex}
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero-photo,.hero-photo-placeholder{margin:0 auto}
+  .hero-stats{justify-content:center}
+  .hero-ctas{justify-content:center}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .strengths{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">官兵 · Philip Guan</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">关于我</a></li>
+    <li><a href="#experience">工作经历</a></li>
+    <li><a href="#projects">项目亮点</a></li>
+    <li><a href="#skills">技能</a></li>
+    <li><a href="#contact">联系我</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="菜单">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="fade-in">
+      <div class="hero-badge"><i class="fa-solid fa-bolt"></i> 国际化 · 资深运营&商业化产品 · AI Native Builder</div>
+      <h1>官 兵</h1>
+      <p class="hero-tagline">7年国际化运营+产品经验 <br>参与了TikTok在中东的冷启动，从0到1跑通过日营收百万美元的TikTok商业化产品 作为Product BP参与Keeta登陆阿联酋并实现市占第二 <br>掌握通过VibeCoding将产品想法敏捷开发成可交互原型的工作范式，在多个赛道实现过AI业务赋能与AIGC商业化闭环 </p>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">7年</div><div class="stat-label">互联网运营->商业化产品</div></div>
+        <div class="stat"><div class="stat-num">$3M/日</div><div class="stat-label">峰值营收产品</div></div>
+        <div class="stat"><div class="stat-num">300%</div><div class="stat-label">AI效率提升</div></div>
+        <div class="stat"><div class="stat-num">Top2</div><div class="stat-label">UAE市场位次</div></div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> 联系我</a>
+        <a href="#projects" class="btn btn-outline"><i class="fa-solid fa-briefcase"></i> 查看项目</a>
+      </div>
+    </div>
+    <div class="fade-in">
+      <img src="assets/Philip_avatar.jpg" alt="官兵照片" class="hero-photo"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="hero-photo-placeholder" style="display:none">
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label">About</div>
+    <div class="section-title">关于我</div>
+    <div class="about-grid fade-in">
+      <div class="about-text">
+        <p>我是官兵(Philip Guan)，一名深耕<strong>国际化/出海赛道</strong>的资深运营&产品经理。过去7年，我先后以TikTok-MENA国家线负责人、TikTok商业化产品创始成员、以及Keeta Product BP等多重身份，参与了多个从0到1的关键产品项目。</p>
+        <p>我长期从事国际化产品，深入挖掘欧美、中东市场的客户与消费者需求，具备<strong>AI Native产品思维</strong>——通过VibeCoding以及RAG、Workflow、Agents等AI工具，将最前沿LLM技术植入真实业务场景，实现效率质变。</p>
+        <!-- <p>我相信：最好的产品经理，既能画出用户路径图，也能自己跑通第一个MVP。</p> -->
+      </div>
+      <div class="strengths">
+        <div class="strength-card">
+          <h4><i class="fa-solid fa-rocket"></i> 从0到1</h4>
+          <p>完整跑通过日营收百万美元的TikTok商业化产品，具备全链路 Product & Ops Ownership</p>
+        </div>
+        <div class="strength-card">
+          <h4><i class="fa-solid fa-globe"></i> 国际化</h4>
+          <p>7年国际化经验，主导多国冷启动与市场拓展</p>
+        </div>
+        <div class="strength-card">
+          <h4><i class="fa-solid fa-brain"></i> AI原生</h4>
+          <p>Openclaw/TRAE深度用户，能独立构建AI Bots与复杂工作流，完成过AIGC商业化闭环</p>
+        </div>
+        <div class="strength-card">
+          <h4><i class="fa-solid fa-chart-line"></i> 数据驱动</h4>
+          <p>具备成熟的商业经营分析框架，熟练使用Python/SQL/Tableau&Excel等BI工具,产出数据洞察，支持关键业务决策</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label">Experience</div>
+    <div class="section-title">工作经历</div>
+    <div class="timeline fade-in">
+
+      <div class="tl-item current">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">美团海外业务 Keeta</div>
+          <div class="tl-period">2025.05 — 至       今</div>
+        </div>
+        <div class="tl-role">国家 Product BP · UAE</div>
+        <ul class="tl-bullets">
+          <li>统筹商家/骑手/用户多条产品线，完成通用产品能力本土化改造，确保 Keeta 如期登陆阿联酋并用半年多时间跻身市占 Top2</li>
+          <li>针对内部孤岛数据，通过 RAG + Workflow + Multimodal LLM，自主搭建多业务线 AI FAQ & Debug Bots，日常排查效率提升约 150%</li>
+          <li>自主调用低代码工具 + 内外部LLM API，独立构建菜品图批量 AIGC 自动化工具，帮助上千中小商家将菜品图更新维护时间大幅压缩 300%</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">字节跳动 · TikTok Music</div>
+          <div class="tl-period">2024.03 — 2025.05</div>
+        </div>
+        <div class="tl-role">AIGC商业化产品</div>
+        <ul class="tl-bullets">
+          <li>运用 Workflow + RAG + TikTok 元数据库，帮助音乐发行商高效生成爆款 MV 宣推方案，将 60 分钟内容脑暴压缩至 5-10 分钟/单曲，半年内推动多支单曲入围 Spotify Top50</li>
+          <li>将个体化推广任务升级为算法化产品工作流，成功推动全球头部音乐厂牌签署千万美金年框合同，实现 Music AIGC 商业化闭环</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">字节跳动 · TikTok 商业化产品</div>
+          <div class="tl-period">2021.05 — 2024.02</div>
+        </div>
+        <div class="tl-role">商业化产品 · 创始成员</div>
+        <ul class="tl-bullets">
+          <li>从0到1完整搭建 TikTok 原生广告内容撮合与交易平台，以极精简团队用2年实现从 MVP 验证到日均百万美元战略营收目标</li>
+          <li>协同推荐算法、达人运营、前线销售等 XFN 部门，将项目拓展至欧洲/中东/亚太全球市场，成为 TikTok 商业化营收 Top2 的产品解决方案，稳定实现日营收三百万美元</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">字节跳动 · TikTok MENA</div>
+          <div class="tl-period">2019.01 — 2021.05</div>
+        </div>
+        <div class="tl-role">国家经理&运营负责人</div>
+        <ul class="tl-bullets">
+          <li>担任多个中东国家的运营负责人，直接对 DAU、消费时长、内容多样化等核心指标负责，带领团队用1年多实现多国 DAU 按计划突破百万</li>
+          <li>协同算法工程、市场增长等多部门，设计并落地兼具通用性与本土化的运营策略，实现内容创作多元化、消费广泛化等多项战略转型</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-header">
+          <div class="tl-company">外交部</div>
+          <div class="tl-period">2012.07 — 2018.06</div>
+        </div>
+        <div class="tl-role">阿拉伯语翻译</div>
+        <ul class="tl-bullets">
+          <li>外交部阿拉伯语专职翻译。曾常驻埃及3年，担任大使办公室主任兼阿拉伯语翻译</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-label">Projects</div>
+    <div class="section-title">关键项目亮点</div>
+    <div class="projects-grid fade-in">
+
+      <div class="proj-card">
+        <div class="proj-icon"><i class="fa-solid fa-store"></i></div>
+        <h3>Keeta UAE 冷启动 & 产品本土化</h3>
+        <div class="proj-sub">美团海外 · 2025.05 — 至今</div>
+        <p>作为常驻阿联酋的一线Product BP，统筹商家、骑手、用户三条产品线，针对阿联酋多元人口结构与激烈竞争环境，完成通用能力改造与针对性创新，确保如期登陆并根据市场竞争与真实用户需求，快速实现内外部产品能力迭代。</p>
+        <div class="proj-metrics">
+          <span class="metric-badge">UAE Top2</span>
+          <span class="metric-badge">内部提效150%</span>
+          <span class="metric-badge">外部省时300%</span>
+        </div>
+        <div class="proj-tags">
+          <span class="tag">新市场拓展</span><span class="tag">跨业务线协作</span><span class="tag">RAG</span><span class="tag">Image AIGC</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3>TikTok 原生广告撮合平台</h3>
+        <div class="proj-sub">字节跳动 · 2021 — 2024</div>
+        <p>作为创始成员，从0到1完整搭建 TikTok 广告内容撮合与交易平台，通过推荐算法 + 平台大数据 + 供需调配策略，帮助客户规模化实现"快速定位达人、敏捷验证创意、加速爆款诞生"等UG目标，实现全球日均三百万美元战略营收目标。</p>
+        <div class="proj-metrics">
+          <span class="metric-badge">$3M日营收峰值</span>
+          <span class="metric-badge">TikTok商达撮合</span>
+          <span class="metric-badge">2年MVP→战略产品</span>
+        </div>
+        <div class="proj-tags">
+          <span class="tag">0→1 ownership</span><span class="tag">商业化产品</span><span class="tag">商达撮合</span><span class="tag">广告收入</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon"><i class="fa-solid fa-music"></i></div>
+        <h3>Music AIGC 商业化工作流</h3>
+        <div class="proj-sub">TikTok Music · 2024 — 2025</div>
+        <p>运用 Workflow + RAG + TikTok 丰富元数据，帮助音乐发行商与独立音乐人高效生成 TikTok 爆款 MV 宣推方案，将原本 60 分钟的内容任务压缩至 5-10 分钟/单曲，推动头部音乐厂牌签订千万美元年框合同签署。</p>
+        <div class="proj-metrics">
+          <span class="metric-badge">爆款放法论</span>
+          <span class="metric-badge">Spotify Top50</span>
+          <span class="metric-badge">千万美金合同</span>
+        </div>
+        <div class="proj-tags">
+          <span class="tag">AIGC商业化</span><span class="tag">Data+Workflow</span><span class="tag">TikTok Music</span><span class="tag">厂牌合作</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label">Skills</div>
+    <div class="section-title">技能与工具</div>
+    <div class="skills-grid fade-in">
+
+      <div class="skill-group">
+        <h3><i class="fa-solid fa-lightbulb"></i> 产品方法论</h3>
+        <div class="skill-item"><div class="skill-name"><span>0→1 产品设计</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>商业化产品</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>国际化/本土化</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>跨部门项目管理</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+      </div>
+
+      <div class="skill-group">
+        <h3><i class="fa-solid fa-robot"></i> AI 工具链</h3>
+        <div class="skill-item"><div class="skill-name"><span>VibeCoding</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>RAG / Workflow / Agents</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>Prompt Engineering</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>低代码 AIGC 工具构建</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+      </div>
+
+      <div class="skill-group">
+        <h3><i class="fa-solid fa-chart-bar"></i> 数据分析</h3>
+        <div class="skill-item"><div class="skill-name"><span>SQL</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>Python</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+        <div class="skill-item"><div class="skill-name"><span>Tableau / Excel</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+      </div>
+
+      <div class="skill-group">
+        <h3><i class="fa-solid fa-language"></i> 语言</h3>
+        <div class="lang-tags">
+          <span class="lang-tag"><i class="fa-solid fa-circle-check"></i> 中文（母语）</span>
+          <span class="lang-tag"><i class="fa-solid fa-circle-check"></i> 英语（流利·CATTI三级）</span>
+          <span class="lang-tag"><i class="fa-solid fa-circle-check"></i> 阿拉伯语（熟练·专业八级）</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">Contact</div>
+    <div class="section-title">联系我</div>
+    <div class="contact-grid fade-in">
+      <div>
+        <div class="contact-info">
+          <!-- <p>正在寻找PM新机会，欢迎一切有趣的商业化、AI Native、国际化方向的机会与合作探讨。</p> -->
+        </div>
+        <div class="contact-links">
+          <a href="tel:13264025065" class="contact-link">
+            <i class="fa-solid fa-phone"></i>
+            <span>132-6402-5065</span>
+          </a>
+          <a href="mailto:guanbing8909@126.com" class="contact-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span>guanbing8909@126.com</span>
+          </a>
+
+          <a href="https://github.com/PhilipGuan" class="contact-link">
+  <i class="fa-brands fa-github"></i>
+  <span>github.com/PhilipGuan/Repository</span>
+</a>
+
+        </div>
+      </div>
+      <div class="contact-cta">
+        <!-- <h3>开放机会</h3> -->
+        <p>商业化产品 · AI Native · 国际化 / 出海产品<br> 期待与你讨论</p>
+        <!-- <a href="mailto:guanbing8909@126.com" class="btn btn-outline" style="background:rgba(255,255,255,.15);border-color:#fff;color:#fff;justify-content:center">
+          <i class="fa-solid fa-paper-plane"></i> 发送邮件 -->
+        <!-- </a> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2026 官兵 Philip Guan
+    <!-- <a href="mailto:guanbing8909@126.com">guanbing8909@126.com</a> -->
+  </div>
+  <div class="vibe">✦ 本网站由 Claude AI / TRAE Solo 协助生成 BugFixint --> <a href="mailto:guanbing8909@126.com">guanbing8909@126.com</a> </div>
+</footer>
+
+<script>
+// Hamburger menu
+const ham=document.getElementById('hamburger'),nav=document.getElementById('navLinks');
+ham.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+// Scroll animations
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+// Skill bars animation
+const skillObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.skill-fill').forEach(bar=>{
+        bar.style.width=bar.dataset.w+'%';
+      });
+      skillObs.unobserve(e.target);
+    }
+  });
+},{threshold:.3});
+document.querySelectorAll('.skill-group').forEach(el=>skillObs.observe(el));
+
+// Active nav highlight on scroll
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id;});
+  navLinks.forEach(a=>{
+    a.style.color=a.getAttribute('href')==='#'+cur?'var(--blue-mid)':'';
+  });
+});
+</script>
+</body>
+</html>
